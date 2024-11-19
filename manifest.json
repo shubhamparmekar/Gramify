@@ -1,0 +1,18 @@
+{
+    "manifest_version": 3,
+    "name": "Grammar Helper",
+    "version": "1.0",
+    "description": "Improve your writing with grammar correction and professional templates. Earn points for learning!",
+    "permissions": ["storage", "activeTab", "scripting"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["popup.js"]
+    }]
+}
